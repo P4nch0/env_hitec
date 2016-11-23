@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import include
 
-from HiTec.views import hello_world, root
+from HiTec.views import root
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^helloworld/$', hello_world),
+    url(r'^Registry/', include('Registry.urls')),
     url(r'^$', root),
 ]
