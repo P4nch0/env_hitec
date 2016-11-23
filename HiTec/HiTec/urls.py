@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from HiTec.views import hello_world, root
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^helloworld/$', hello_world),
+    url(r'^$', root),
 ]
